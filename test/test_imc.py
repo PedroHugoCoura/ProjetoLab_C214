@@ -23,7 +23,7 @@ def test_imc_normal(page):
     page.wait_for_selector('h3:has-text("Resultado")')
     resultado = page.locator('h3:has-text("Resultado") + p').inner_text()
     assert 'IMC' in resultado
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_sobrepeso(page):
     page.goto('http://localhost:5000')
@@ -33,7 +33,7 @@ def test_imc_sobrepeso(page):
     page.wait_for_selector('h3:has-text("Resultado")')
     resultado = page.locator('h3:has-text("Resultado") + p').inner_text()
     assert 'IMC' in resultado
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_obesidade(page):
     page.goto('http://localhost:5000')
@@ -43,7 +43,7 @@ def test_imc_obesidade(page):
     page.wait_for_selector('h3:has-text("Resultado")')
     resultado = page.locator('h3:has-text("Resultado") + p').inner_text()
     assert 'IMC' in resultado
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_abaixo_peso(page):
     page.goto('http://localhost:5000')
@@ -53,7 +53,7 @@ def test_imc_abaixo_peso(page):
     page.wait_for_selector('h3:has-text("Resultado")')
     resultado = page.locator('h3:has-text("Resultado") + p').inner_text()
     assert 'Abaixo ' in resultado
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_valores_invalidos(page):
     page.goto('http://localhost:5000')
@@ -63,7 +63,7 @@ def test_imc_valores_invalidos(page):
     page.wait_for_selector('.alert-danger')
     erro = page.locator('.alert-danger').inner_text()
     assert 'insira valores válidos' in erro
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_zero_altura(page):
     page.goto('http://localhost:5000')
@@ -73,7 +73,7 @@ def test_imc_zero_altura(page):
     page.wait_for_selector('.alert-danger')
     erro = page.locator('.alert-danger').inner_text()
     assert 'maiores que zero' in erro
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
 
 def test_imc_zero_peso(page):
     page.goto('http://localhost:5000')
@@ -83,4 +83,4 @@ def test_imc_zero_peso(page):
     page.wait_for_selector('.alert-danger')
     erro = page.locator('.alert-danger').inner_text()
     assert 'maiores que zero' in erro
-    # page.wait_for_timeout(10000)
+    page.wait_for_timeout(10000)
