@@ -65,4 +65,4 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pytest test/test_imc.py --maxfail=3 --disable-warnings -v
+          pytest --html=report.html
