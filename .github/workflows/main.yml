@@ -65,4 +65,4 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pytest --html=report.html
+          pytest test/test_imc.py --html=report.html

@@ -48,7 +48,7 @@ O objetivo do projeto é criar uma ferramenta simples e acessível para calcular
     ```bash
     pip install pytest-html
     ```
-    Por fim, rode o comando: `pytest --html=report.html`
+    Por fim, rode o comando: `pytest test/test_imc.py --html=report.html`
     ```bash
-    pytest --html=report.html
+    pytest test/test_imc.py --html=report.html
     ```
