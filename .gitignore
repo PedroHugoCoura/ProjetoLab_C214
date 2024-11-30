@@ -1,5 +1,5 @@
-report.html
+relatorio.html
 __pycache__/
 .pytest_cache/
 assets/
-test/report.html
+venv
